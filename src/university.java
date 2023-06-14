@@ -4,6 +4,9 @@ public class university {
     final String country;
     final String[] location;
     final boolean financialAid;
+    byte uniType;
+    public final static byte liberalArts=0;
+    public final static byte research=1;
 
     //user the information should be able to constantly input
     String[] strengths;
@@ -34,5 +37,9 @@ public class university {
 
     public boolean hasFinancialAid() {
         return financialAid;
+    }
+
+    public void setUniType(byte uniType) {
+        this.uniType = uniType;
     }
 }

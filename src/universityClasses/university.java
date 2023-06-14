@@ -1,3 +1,5 @@
+package universityClasses;
+
 public class university {
     //final information set in constructor regarding universities -> does not change
     final String name;
@@ -5,7 +7,7 @@ public class university {
     final String[] location;
     final boolean financialAid;
 
-    //byte information for liberal arts and research university types
+    //byte information for liberal arts and research university.university types
     byte uniType;
     public final static byte liberalArts=0;
     public final static byte research=1;

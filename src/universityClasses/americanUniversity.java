@@ -1,4 +1,6 @@
-public class americanUniversity extends university{
+package universityClasses;
+
+public class americanUniversity extends university {
     boolean SAToptional;
     boolean acceptsACT;
 

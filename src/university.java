@@ -4,6 +4,8 @@ public class university {
     final String country;
     final String[] location;
     final boolean financialAid;
+
+    //byte information for liberal arts and research university types
     byte uniType;
     public final static byte liberalArts=0;
     public final static byte research=1;
@@ -41,5 +43,9 @@ public class university {
 
     public void setUniType(byte uniType) {
         this.uniType = uniType;
+    }
+
+    public String[] getLocation() {
+        return location;
     }
 }

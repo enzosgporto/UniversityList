@@ -42,4 +42,9 @@ public class country {
     public void addCons(String con){
         this.cons.add(con);
     }
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

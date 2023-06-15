@@ -22,10 +22,15 @@ public class Main {
 
     }
 
+    public static List writeUniToFile(List parameterList) throws IOException {
+        return gson.<List<university>>fromJson(loadFileFromClasspath("universityList.json"), (Type) parameterList);
+    }
+
     public static String loadFileFromClasspath(String fileName) throws IOException {
         ClassLoader classLoader = Main.class.getClassLoader();
         try (InputStream inputStream = classLoader.getResourceAsStream(fileName)) {
             // common-io
+            assert inputStream != null;
             return IOUtils.toString(inputStream, StandardCharsets.UTF_8);
         }
     }

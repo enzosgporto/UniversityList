@@ -1,5 +1,7 @@
 package universityClasses;
 
+import java.util.ArrayList;
+
 public class university {
     //final information set in constructor regarding universities -> does not change
     final String name;
@@ -13,8 +15,8 @@ public class university {
     public final static byte research=1;
 
     //user the information should be able to constantly input
-    String[] strengths;
-    String[] weaknesses;
+    ArrayList<String> strengths;
+    ArrayList<String> weaknesses;
 
     public university(String name, String country, String city, String state, boolean financialAid) {
         this.name = name;
@@ -23,11 +25,11 @@ public class university {
         this.financialAid = financialAid;
     }
 
-    public String[] getStrengths() {
+    public ArrayList<String> getStrengths() {
         return strengths;
     }
 
-    public String[] getWeaknesses() {
+    public ArrayList<String> getWeaknesses() {
         return weaknesses;
     }
 
@@ -49,5 +51,13 @@ public class university {
 
     public String[] getLocation() {
         return location;
+    }
+
+    public void addStrengths(String strength){
+        this.strengths.add(strength);
+    }
+
+    public void addWeaknesses(String weakness){
+        this.weaknesses.add(weakness);
     }
 }

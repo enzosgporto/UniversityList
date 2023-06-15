@@ -1,11 +1,12 @@
 package universityClasses;
 
 import java.util.ArrayList;
+import locationClasses.country;
 
 public class university {
     //final information set in constructor regarding universities -> does not change
     final String name;
-    final String country;
+    final country country;
     final String[] location;
     final boolean financialAid;
 
@@ -18,7 +19,7 @@ public class university {
     ArrayList<String> strengths;
     ArrayList<String> weaknesses;
 
-    public university(String name, String country, String city, String state, boolean financialAid) {
+    public university(String name, country country, String city, String state, boolean financialAid) {
         this.name = name;
         this.country = country;
         this.location = new String[]{city, state};
@@ -37,7 +38,7 @@ public class university {
         return name;
     }
 
-    public String getCountry() {
+    public country getCountry() {
         return country;
     }
 

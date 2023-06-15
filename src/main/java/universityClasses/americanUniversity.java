@@ -1,11 +1,14 @@
 package universityClasses;
 
+import locationClasses.country;
+
 public class americanUniversity extends university {
+    public static country unitedStates = new country("United States", "North America");
     boolean SAToptional;
     boolean acceptsACT;
 
     public americanUniversity(String name, String city, String state, boolean financialAid) {
-        super(name, "USA", city, state, financialAid);
+        super(name, unitedStates, city, state, financialAid);
     }
 
     public void setAcceptsACT(boolean acceptsACT) {

@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Scanner;
 
+import universityClasses.americanUniversity;
 import universityClasses.university;
 
 public class Main {
@@ -26,7 +27,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you wish to add a university or an american university?");
         String universityToAdd = sc.nextLine();
+
         if(universityToAdd.equalsIgnoreCase("university")){
+            //allows user to add input for the university details
             System.out.println("What is the name of this university?");
             String uniName = sc.nextLine();
 
@@ -43,9 +46,29 @@ public class Main {
                 answer = true;
             }
             university university = new university(uniName, new country("Yes", "Yes"), uniCity, uniState, answer);
+            list.add(university);
 
         } else if (universityToAdd.equalsIgnoreCase("american university")) {
+            //allows user to add input for the university details
+            System.out.println("What is the name of this university?");
+            String uniName = sc.nextLine();
 
+            System.out.println("What is the city this university is located");
+            String uniCity = sc.nextLine();
+
+            System.out.println("In which state is this university located");
+            String uniState = sc.nextLine();
+
+            System.out.println("Does this university accept financial aid: (y/n)");
+            String fa = sc.nextLine();
+            Boolean answer = false;
+            if(fa.equalsIgnoreCase("y")){
+                answer = true;
+            }
+
+            //create american university and add it to the list
+            university university = new americanUniversity(uniName, uniCity, uniState, answer);
+            list.add(university);
         }
 
     }
